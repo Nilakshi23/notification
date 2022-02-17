@@ -11,7 +11,7 @@ job_name = "Build_Notification"   #Give your job name here
 def jenkins_job_status(job_name):
         
         try:
-                url  = "http://52.55.241.243:8080/job/Chatbot/188/" %job_name   #Replace 'your_jenkins_endpoint' with your Jenkins URL
+                url  = "http://52.55.241.243:8080" %job_name   #Replace 'your_jenkins_endpoint' with your Jenkins URL
                 while True:
                         data = requests.get(url).json()
                         if data['building']:
